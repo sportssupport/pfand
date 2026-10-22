@@ -167,9 +167,9 @@ const icoArrow=`<svg viewBox="0 0 24 24" width="14" height="14" fill="none" aria
 function head(){
   return `<header class="top">
     <div class="brand"><span class="logo">sportssupport</span><span class="claim">FEEL THE SPIRIT</span></div>
-    <div class="h1">PFAND FÜR GUTES</div>
+    <div class="h1">PFAND FÜR DEN GUTEN ZWECK</div>
     <div class="bar"></div>
-    <div class="sub">Jede Flasche in unserer Pfandtonne zählt. Einmal im Jahr spenden wir alles.</div>
+    <div class="sub">Jede Flasche in unserer Pfandtonne zählt – der Erlös wird gespendet.</div>
   </header>`;
 }
 
@@ -209,12 +209,13 @@ function view(D){
   const how = `<div class="section">So funktioniert's</div>
     <div class="card steps">
       <div class="step"><span class="num">1</span><p>Pfandflaschen &amp; Dosen in die Tonne werfen.</p></div>
-      <div class="step"><span class="num">2</span><p>Wir lösen das Pfand ein und tragen es hier ein.</p></div>
-      <div class="step"><span class="num">3</span><p>Zu Weihnachten spenden wir den gesamten Betrag.</p></div>
+      <div class="step"><span class="num">2</span><p>Flaschen mit Milchprodukten bitte in den normalen Mistkübel werfen – diese werden leider ohnehin nicht angenommen.</p></div>
+      <div class="step"><span class="num">3</span><p>Wir lösen das Pfand ein und tragen den Betrag hier ein.</p></div>
+      <div class="step"><span class="num">4</span><p>In regelmäßigen Abständen spenden wir den Erlös an unterschiedliche lokale Organisationen.</p></div>
     </div>`;
 
   return `${DEMO_MODE?'<div class="demo">Vorschau mit Beispieldaten</div>':""}${head()}
-    <main>${hero}${spList}${how}</main>
+    <main>${hero}${how}${spList}</main>
     <footer>Stand: ${esc(fShort(D.stand)||"–")}<br><a href="https://sportssupport.at" target="_blank" rel="noopener">sportssupport.at</a></footer>`;
 }
 
